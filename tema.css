@@ -1,0 +1,88 @@
+
+header {
+    font-size: 70px;
+    font-family: Georgia, serif;
+    text-align: center;
+    
+    border: 2px solid black;
+    border-radius: 10px;
+    padding:40px;
+    margin: 20px;
+    background-color: #951B1B;
+
+    max-width: 100%;
+}
+
+
+body {
+    background-color: #4B0D0D;
+}
+
+body h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+}
+
+
+.bokser {
+    display:flex;
+    gap: 20px;
+    padding:20px;
+    
+    max-width: 1500px;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+.boks {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    background-color: #951B1B;
+   
+    
+}
+
+
+.boks.boks1{
+    max-height:1200px;
+    max-width:400px;
+    font-size: 20px;
+}
+
+
+
+.skrik{
+    width:100%;
+    max-width: 400px;
+    height:auto;
+
+}
+
+/* Ki brukt på alt mellom linje 63 til og med linje 76 til hjelp med animasjon*/
+.skrik:hover{
+    animation: hvit-puls 2s infinite ease-in-out;
+}
+
+
+@keyframes hvit-puls {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px white);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px white);
+    }
+}
+
+
+
+.boks.boks2{
+    max-height: 600px;
+    font-size: 25px;
+}
+
+
