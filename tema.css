@@ -62,6 +62,8 @@ body h1 {
 
 }
 
+
+
 /* Ki brukt på alt mellom linje 63 til og med linje 76 til hjelp med animasjon*/
 .skrik:hover{
     animation: hvit-puls 2s infinite ease-in-out;
