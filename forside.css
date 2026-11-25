@@ -59,6 +59,7 @@ body {
 }
 
 .meny a {
+  text-transform: capitalize;
   display: flex;
   color: #111111;
   font-size: 18px;
