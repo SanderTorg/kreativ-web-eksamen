@@ -1,90 +1,137 @@
-
-header {
-    font-size: 70px;
-    font-family: Georgia, serif;
-    text-align: center;
-    
-    border: 2px solid black;
-    border-radius: 10px;
-    padding:40px;
-    margin: 20px;
-    background-color: #951B1B;
-
-    max-width: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-size: 70px;
+  font-family: Georgia, serif;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 40px;
+  margin: 20px;
+  background-color: #951b1b;
+  max-width: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navbar-header {
+  width: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navbar p {
+  display: flex;
+  font-size: 25px;
+  justify-content: baseline;
+  align-items: center;
+  font-weight: 600;
+  margin: 0px 0px;
+  letter-spacing: -1px;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  transition: ease-in-out 0.3s all;
+}
+
+.navbar a:hover {
+  color: black;
+  border: 1px solid black;
+  transition: ease-in-out 0.3s all;
+}
 
 body {
-    background-color: #4B0D0D;
+  background-color: #4b0d0d;
 }
 
 body h1 {
-    font-family: Georgia, serif;
-    font-size: 50px;
+  font-family: Georgia, serif;
+  font-size: 50px;
 }
-
 
 .bokser {
-    display:flex;
-    gap: 20px;
-    padding:20px;
-    
-    max-width: 1500px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 
-    font-family: Arial, sans-serif;
+  max-width: 1500px;
 
+  font-family: Arial, sans-serif;
 }
-
 
 .boks {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1;
-    background-color: #951B1B;
-   
-    
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  background-color: #951b1b;
 }
 
-
-.boks.boks1{
-    max-height:1200px;
-    max-width:400px;
-    font-size: 20px;
+.boks.boks1 {
+  max-height: 1200px;
+  max-width: 400px;
+  font-size: 20px;
 }
 
-
-
-.skrik{
-    width:100%;
-    max-width: 400px;
-    height:auto;
-
+.skrik {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
-
-
 
 /* Ki brukt på alt mellom linje 63 til og med linje 76 til hjelp med animasjon*/
-.skrik:hover{
-    animation: hvit-puls 2s infinite ease-in-out;
+.skrik:hover {
+  animation: hvit-puls 2s infinite ease-in-out;
 }
-
 
 @keyframes hvit-puls {
-    0%, 100% {
-        filter: drop-shadow(0 0 10px white);
-    }
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px white);
+  }
 
-    50% {
-        filter: drop-shadow(0 0 20px white);
-    }
+  50% {
+    filter: drop-shadow(0 0 20px white);
+  }
 }
 
-
-
-.boks.boks2{
-    max-height: 600px;
-    font-size: 25px;
+.boks.boks2 {
+  max-height: 600px;
+  font-size: 25px;
 }
-
-
