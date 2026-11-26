@@ -1,0 +1,202 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #4b0d0d;
+  margin: 0;
+}
+
+header {
+  position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.Title {
+  margin: 0;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  border: 2px solid black;
+
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.IntroName {
+  width: 100%;
+  background-color: #951b1b;
+  text-align: left;
+  padding: 150px 0;
+  padding-left: 20px;
+  margin-top: 30px;
+  color: white;
+  font-size: 40px;
+  border-top: 8px solid black;
+  border-bottom: 8px solid black;
+}
+
+.Sentence {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: white;
+  margin: 0;
+  padding-left: 80px;
+}
+
+.IntroName h2 {
+  margin: 0;
+}
+
+.MunchImage {
+  position: absolute;
+  right: 560px;
+  top: 148px;
+  width: 250px;
+  height: 350px;
+}
+
+.MunchText {
+  position: absolute;
+  right: 120px;
+  top: 300px;
+  width: 300px;
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
+
+.About {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  background-color: #951b1b;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.BlackLine {
+  width: 100%;
+  height: 8px;
+  background-color: black;
+  margin-top: 30px;
+}
+
+.Tekst1 {
+  width: 100%;
+  background-color: #211010;
+  color: white;
+  padding: 10px 20px 10px 25px;
+  text-align: left;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.Tekst1 h2 {
+  font-size: 20px;
+}
+
+.Tekst1 p {
+  font-size: 15px;
+}
+
+.BarndomImage {
+  position: relative;
+  float: left;
+  margin-right: 30px;
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Biografi {
+  background-color: #211010;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.BildeContainer {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.Bilde {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.Tema {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 22px;
+}
+
+.BildeContainer:hover .Tema {
+  animation: VisTema 0.5s forwards;
+}
+
+@keyframes VisTema {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.FaktaBoks {
+  display: none;
+  position: absolute;
+  bottom: 75%;
+  left: 0;
+  width: 90%;
+  padding: 5%;
+  background-color: #4b0d0d;
+  color: white;
+  border: 1px solid white;
+  z-index: 10;
+}
+
+.FaktaBoks:target {
+  display: block;
+}
+
+.Lukk {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.Instruksjon {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px 25px;
+  display: inline-block;
+  margin: 0;
+  border-radius: 50px;
+}
