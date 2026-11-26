@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,15 +13,51 @@ body {
   margin: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 header {
-  position: center;
+  display: flex;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
   background: transparent;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header li {
+  display: flex;
+  text-align: center;
+}
+
+header a {
+  border: 1px solid white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  transition:
+    color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+header a:hover {
+  border: 1px solid gray;
+  text-decoration: underline;
+  color: gray;
 }
 
 .Title {
