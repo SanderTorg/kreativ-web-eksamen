@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Edvard Munchs malerier</title>
+  <link rel="stylesheet" href="./malerier.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="wall-title">Edvard Munch – malerier</h1>
+
+    <a href="./forside.html" class="home-button fx-liquid">Til hovedsiden</a>
+
+    <section class="slider" aria-label="Bildegalleri">
+      <input type="radio" name="slide" id="p1" checked>
+      <input type="radio" name="slide" id="p2">
+      <input type="radio" name="slide" id="p3">
+
+      <input type="checkbox" class="zoom-toggle" id="zoom1">
+      <input type="checkbox" class="zoom-toggle" id="zoom2">
+      <input type="checkbox" class="zoom-toggle" id="zoom3">
+      <input type="checkbox" class="zoom-toggle" id="zoom4">
+      <input type="checkbox" class="zoom-toggle" id="zoom5">
+
+      <div class="viewport">
+        <div class="track">
+          <label class="item" for="zoom1">
+            <img src="./images/study_of_a_mans_head.jpg" alt="Study of a Man's Head">
+          </label>
+          <label class="item" for="zoom2">
+            <img src="./images/dagny_juel_przybyszewaska.jpg" alt="Dagny Juel Przybyszewska">
+          </label>
+          <label class="item" for="zoom3">
+            <img src="./images/the_sun.jpg" alt="The Sun">
+          </label>
+          <label class="item" for="zoom4">
+            <img src="./images/vampire.jpg" alt="Vampire">
+          </label>
+          <label class="item" for="zoom5">
+            <img src="./images/self-portrait-with-cigarette.jpg" alt="Self-Portrait with Cigarette">
+          </label>
+        </div>
+      </div>
+
+
+
+      <!--Malerier med tekstbokser og munch. Brukte Ai generert tekster med referansen fra https://grandspeintres.com -->
+      <!-- Jeg brukte Ai for å at den skulle forklare meg hvordan jeg kan få bildene på plass som jeg ville. og da brukte jeg lightbox og checkbox for å få det til. -->
+
+      <!-- Study of a Man's Head -->
+
+      <div class="lightbox" id="lightbox1">
+        <label class="lightbox-backdrop" for="zoom1" aria-label="Lukk"></label>
+        <img class="lightbox-art" src="./images/study_of_a_mans_head.jpg" alt="Study of a Man's Head">
+        <img class="munch-portrait" src="bilder/much.png" alt="Edvard Munch">
+        <div class="text-box">
+
+          <h2> "Study of a Man's Head" </h2>
+          <p>
+            Dette portrettstudiet viser et mannshode med en alvorlig og
+            ettertenksom mine. Munch bruker farger og penselstrøk til å gi
+            ansiktet karakter, i stedet for å fokusere bare på nøyaktige detaljer.
+          </p>
+        </div>
+        <label class="lightbox-close" for="zoom1" aria-label="Lukk">×</label>
+      </div>
+
+
+      <!-- Dagny Juel Przybyszewska -->
+
+      <div class="lightbox" id="lightbox2">
+        <label class="lightbox-backdrop" for="zoom2" aria-label="Lukk"></label>
+        <img class="lightbox-art" src="./images/dagny_juel_przybyszewaska.jpg" alt="Dagny Juel Przybyszewska">
+        <img class="munch-portrait" src="bilder/much.png" alt="Edvard Munch">
+        <div class="text-box">
+          <h2>"Dagny Juel Przybyszewska"</h2>
+          <p>
+            Dagny Juel Przybyszewska var norsk forfatter og en del av Munchs
+            kunstnerkrets. I portrettet møter vi henne gjennom Munchs
+            uttrykksfulle farger og stemningsfulle stil. Bildet gir et inntrykk
+            av både personlighet og mystikk.</p>
+        </div>
+        <label class="lightbox-close" for="zoom2" aria-label="Lukk">×</label>
+      </div>
+
+
+      <!-- The Sun -->
+
+      <div class="lightbox" id="lightbox3">
+        <label class="lightbox-backdrop" for="zoom3" aria-label="Lukk"></label>
+        <img class="lightbox-art" src="./images/the_sun.jpg" alt="The Sun">
+        <img class="munch-portrait" src="bilder/much.png" alt="Edvard Munch">
+        <div class="text-box">
+          <h2>"The Sun"</h2>
+          <p>
+            I «The Sun» lar Munch solstråler spre seg over landskapet i sterke,
+            klare farger. Motivet virker både kraftfullt og fullt av liv. Verket
+            er en del av de store veggmaleriene Munch laget til Universitetet i
+            Oslo.
+          </p>
+        </div>
+        <label class="lightbox-close" for="zoom3" aria-label="Lukk">×</label>
+      </div>
+
+
+
+      <!-- Vampire -->
+
+      <div class="lightbox" id="lightbox4">
+        <label class="lightbox-backdrop" for="zoom4" aria-label="Lukk"></label>
+        <img class="lightbox-art" src="./images/vampire.jpg" alt="Vampire">
+        <img class="munch-portrait" src="./images/much.png" alt="Edvard Munch">
+        <div class="text-box">
+          <h2>"Vampire"</h2>
+          <p>
+            I dette mørke og intense maleriet fra 1890-årene viser Edvard Munch
+            to mennesker i en tett omfavnelse. Kvinnenes røde hår og de mørke
+            fargene gir motivet en mystisk stemning. Munch kalte først verket
+            «Kjærlighet og smerte».
+          </p>
+        </div>
+        <label class="lightbox-close" for="zoom4" aria-label="Lukk">×</label>
+      </div>
+
+
+      <!-- Self-Portrait with Cigarette -->
+
+      <div class="lightbox" id="lightbox5">
+        <label class="lightbox-backdrop" for="zoom5" aria-label="Lukk"></label>
+        <img class="lightbox-art" src="./images/self-portrait-with-cigarette.jpg" alt="Self-Portrait with Cigarette">
+        <img class="munch-portrait" src="./images/much.png" alt="Edvard Munch">
+        <div class="text-box">
+          <h2>"Self-Portrait with Cigarette"</h2>
+          <p>
+            I dette selvportrettet fra 1895 står Munch med et direkte og alvorlig
+            blikk. Sigarettrøyken og den mørke bakgrunnen gir bildet en drømmeaktig
+            stemning. Farger og penselstrøk gjør portrettet uttrykksfullt og
+            personlig.
+          </p>
+        </div>
+        <label class="lightbox-close" for="zoom5" aria-label="Lukk">×</label>
+      </div>
+
+
+
+      <!--Piler hehe-->
+      <div class="arrows">
+        <!-- Hvor de skal gå --->
+        <label for="p1" class="left from2" aria-label="Forrige bilde">❮</label>
+        <label for="p2" class="left from3" aria-label="Forrige bilde">❮</label>
+
+        <label for="p2" class="right from1" aria-label="Neste bilde">❯</label>
+        <label for="p3" class="right from2" aria-label="Neste bilde">❯</label>
+      </div>
+
+
+    </section>
+  </main>
+</body>
+
+</html>

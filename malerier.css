@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5eee6;
+  position: relative;
+}
+
+/* Veggliste/linjer oppe og nede */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background: #4b0d0d;
+  border-top: 2px solid #a99b8c;
+  border-bottom: 2px solid #a99b8c;
+  z-index: 10;
+}
+
+body::before {
+  top: 0;
+}
+
+body::after {
+  bottom: 0;
+}
+
+/*tittelen*/
+.wall-title {
+  position: fixed;
+  top: 70px; /*ytter tittelen opp eller ned på den røde delen */
+  left: 0;
+  width: 100%;
+  z-index: 11; /* Sørger for at tittelen vises over vegglisten */
+  margin: 0;
+  text-align: center;
+  color: #f5eee6;
+}
+
+/* knapp for å gå på main side, Nicholas sin side */
+.home-button {
+  position: fixed;
+  top: 50px;
+  left: 30px;
+  z-index: 20; /* Over vegglisten */
+  display: inline-block;
+  padding: 18px 30px;
+  font-size: 20px;
+  color: #f5eee6;
+  background: #6b2020;
+  border: 1px solid #f5eee6;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  background: #8a3030;
+}
+
+/* bla gjennom maleriene */
+/* HELL*/
+.slider {
+  position: relative;
+  width: min(1500px, 90vw);
+  margin: 300px auto;
+  top: 75px;
+}
+
+.slider input {
+  display: none;
+}
+
+.viewport {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  display: block;
+  flex: 0 0 calc((100% - 32px) / 3);
+  height: 450px;
+  overflow: hidden;
+  background: #f5eee6;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Slideren flytter ett bilde om gangen */
+/* HELL Nr 2*/
+#p1:checked ~ .viewport .track {
+  transform: translateX(0);
+}
+
+#p2:checked ~ .viewport .track {
+  transform: translateX(calc(-33.333333% - 5.333333px));
+}
+
+#p3:checked ~ .viewport .track {
+  transform: translateX(calc(-66.666667% - 10.666667px));
+}
+
+/* Piler */
+.arrows {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.arrows label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #111;
+  font-size: 42px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.arrows .left {
+  left: -40px;
+}
+
+.arrows .right {
+  right: -40px;
+}
+
+#p1:checked ~ .arrows .from1,
+#p2:checked ~ .arrows .from2,
+#p3:checked ~ .arrows .from3 {
+  display: block;
+}
+
+/* Bilder når du trykker på de*/
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.lightbox-art {
+  position: fixed;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 55vw;
+  max-height: 75vh;
+  object-fit: contain;
+  z-index: 101;
+}
+
+/* Customizd for maleri 3 og 4 fordi de er andre form*/
+#lightbox3 .lightbox-art,
+#lightbox4 .lightbox-art {
+  max-width: 60vw;
+  max-height: 80vh;
+  left: 28%;
+}
+
+/* Muck som kommer opp og yapper om maleriene */
+.munch-portrait {
+  position: fixed;
+  top: 52%; /* Lavere prosent flytter bildet opp */
+  right: 10%;
+  transform: translateY(-50%);
+  width: min(60vw, 600px); /* Øk for å gjøre det større */
+  max-height: 80vh;
+  object-fit: contain;
+  z-index: 101;
+  animation: portrait-appear 2s ease-out both;
+}
+
+/* Tekstbokser som kommer opp med munch */
+.text-box {
+  position: fixed;
+  z-index: 102;
+  right: 20%;
+  top: 77%;
+  transform: translateY(-50%);
+  width: min(100vw, 770px);
+  max-height: 300vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #222;
+  font-size: 20px;
+  background: linear-gradient(
+    to bottom,
+    #4b0d0d 0 18px,
+    #f5eee6 18px calc(100% - 18px),
+    #4b0d0d calc(100% - 18px) 100%
+  );
+  border: 1px solid #a99b8c;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+/*Størrelsen av overskrifter i tekstboksene*/
+.text-box h2 {
+  font-size: 28px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4b0d0d;
+}
+
+/* Customizd tekstbokser for alle boksene */
+#lightbox5 .text-box {
+  width: min(60vw, 770px);
+  height: 25vh;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+#lightbox3 .text-box,
+#lightbox4 .text-box {
+  width: min(45vw, 450px);
+  height: 25vh;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+#lightbox1 .text-box,
+#lightbox2 .text-box {
+  width: min(60vw, 770px);
+  height: 25vh;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+/* det er X på høyre hjørne for å lukke maleriet */
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* checkboxene for å holde alt inne en*/
+.zoom-toggle {
+  display: none;
+}
+#zoom1:checked ~ #lightbox1,
+#zoom2:checked ~ #lightbox2,
+#zoom3:checked ~ #lightbox3,
+#zoom4:checked ~ #lightbox4,
+#zoom5:checked ~ #lightbox5 {
+  display: flex;
+}
+
+/*EDVART MUNCH SOM FORTELLER OM MALERIER!*/
+.munch-portrait {
+  animation:
+    portrait-fade 0.8s ease-out both,
+    munch-talk 1s ease-in-out 0.8s infinite;
+}
+
+/* smothly fade av much*/
+@keyframes portrait-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animasjon for å få munch til å "snakke" */
+
+@keyframes munch-talk {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 12px));
+  }
+}
