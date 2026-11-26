@@ -1,8 +1,23 @@
+/* 
+Dette er mitt (Sander Torgersen) stilark for prosjektet 
+Har benyttet flexbox for layout. For å sikre at elementene plasseres riktig og tilpasses ulike skjermstørrelser. 
+*/
+
+/* GLOBALE STILER */
+/*
+::before og ::after inkluderer pseudo-elementer som legges til før
+eller etter innholdet i et element i DOM-en, og brukes ofte for dekorative formål.
+
+Dette påvirker hvordan elementets bredde og høyde beregnes.
+*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* Nullstill margin og padding for vanlige elementer som ul, li, h1-h3 og p */
 
 ul,
 li,
@@ -18,12 +33,14 @@ li {
   padding: 0;
 }
 
+/* BODY */
+
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
   background-color: #f5f2eb;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, serif;
 }
 
 /* HEADER*/
@@ -68,7 +85,7 @@ nav li {
 }
 
 .nav-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.8rem 1.2rem;
@@ -85,11 +102,6 @@ nav li {
 .nav-btn:hover {
   background-color: #f9f6ef;
   color: #193744;
-}
-
-.nav-btn:focus-visible {
-  outline: 3px solid #e8c5a5;
-  outline-offset: 4px;
 }
 
 /* MAIN */
@@ -124,6 +136,14 @@ main {
   gap: 1.25rem;
 }
 
+/* CARD */
+/*
+Kortene som brukes i seksjonene  i hovedinnholdet.
+Benyttet flex-grow for å sikre at kortene tilpasser seg tilgjengelig plass i seksjonen.
+Benyttet også flex-shrink og flex-basis for å sikre at kortene ikke blir for små eller for store.
+Og flex-basis for å angi en foretrukket størrelse på kortene.
+Box-shadow brukes for å gi skygge på kortene og skape en følelse av dybde.
+*/
 .card {
   display: flex;
   flex-grow: 1;
@@ -152,6 +172,9 @@ main {
   font-size: 1rem;
   line-height: 1.7;
 }
+
+/* ANIMATIONS */
+/* Animasjon for navigasjonsknapp ved hover */
 
 @keyframes nav-btn-hover {
   0% {
